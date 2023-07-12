@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.content {
+  max-width: max-content;
+  margin: auto;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2.hidden {
+  display: none;
+}
+div {text-align: center;}
+textarea { font-size: 25px; }
+</style>
+    <head>
+        <title>BiliBili扫描登入</title>
+        <meta charset="utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+        <script type="text/javascript" id="crazy"></script>
+    </head>
+<body class="content">
+<br>
+<h1 class="content">BiliBili扫描登入</h1>
+<h1 class="content">快速获取Cookie</h1>
+<br>
+<div id="qrcode"></div>
+<div id="status" style="color: red; font-size: 24px">等待扫码...</div>
+<a id="intent"> Take Me To BiliBili </a>
+<div>
+<textarea id="myInput" placeholder="等待扫码..." rows="5" cols="25"></textarea>
+</div>
+<div>
+<button class="button" onclick="copy()">JSON Format</button>
+</div>
+<br>
+<br>
+<div>
+<textarea id="myInput2" placeholder="等待扫码..." rows="5" cols="25"></textarea>
+</div>
+<div>
+<button class="button" onclick="copy2()">Default Format</button>
+</div>
+
+<script type="text/javascript">
+   // change path to match your file:
+   let resourcePath = 'crazy.js';
+
+   document.getElementById('crazy').src = resourcePath + '?v=' + Date.now();
+</script>
+</body>
+</html>
